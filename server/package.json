@@ -6,9 +6,7 @@
   "scripts": {
     "watch": "NODE_ENV=watch node node_modules/nodemon/bin/nodemon.js -e js,html,css src/index.js",
     "test": "NODE_ENV=test mocha --reporter=list --exit",
-    "start": "node src/index.js",
-    "snyk-protect": "snyk protect",
-    "prepare": "npm run snyk-protect"
+    "start": "node src/index.js"
   },
   "author": "Francisco Pereira",
   "license": "ISC",
@@ -44,8 +42,7 @@
     "pretty-bytes": "4.0.2",
     "random-string": "0.2.0",
     "tobber-engine": "../engine",
-    "vision": "5.3.2",
-    "snyk": "1.90.2"
+    "vision": "5.3.2"
   },
   "devDependencies": {
     "chai": "^4.1.2",
@@ -57,6 +54,5 @@
     "eslint-plugin-standard": "^3.0.1",
     "mocha": "^5.2.0",
     "nodemon": "^1.17.5"
-  },
-  "snyk": true
+  }
 }
