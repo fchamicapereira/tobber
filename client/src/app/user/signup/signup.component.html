@@ -1,0 +1,52 @@
+<div *ngIf="error" class="center error-message">
+  {{error}}
+</div>
+
+<form #userRegistrationForm="ngForm" (ngSubmit)="onSubmit()">
+  
+  <div class="form-group">
+    <input class="validate form-control" type="text" placeholder="Username"
+    name="username" #username="ngModel" [(ngModel)]="user.username"
+    required minlength="1" maxlength="20">
+  </div>
+
+  <div class="form-group">
+    <input class="validate form-control" type="password" id="password" placeholder="Password"
+    name="password" #password="ngModel" [(ngModel)]="user.password"
+    required minlength="8" maxlength="30">
+
+    <span *ngIf="password.invalid && (password.touched || password.dirty)">
+
+      <small *ngIf="password.errors.minlength" class="form-text text-muted error">
+        Password must have at least 8 characters
+      </small>
+
+    </span>
+
+  </div>
+
+  <div class="form-group">
+    <input class="validate form-control" type="password" id="password2"  placeholder="Repeat password"
+    name="password2" #password2="ngModel" [(ngModel)]="user.password2"
+    required minlength="8" maxlength="30">
+    
+    <span *ngIf="user.password !== user.password2 && (password2.dirty || password2.touched)">
+
+        <small class="form-text text-muted error">
+          Passwords don't match.
+        </small>
+  
+      </span>
+  </div>
+
+  <div class="form-group">
+    <input class="validate form-control" type="text" id="secret" placeholder="Secret"
+    name="secret"  #Secret="ngModel" [(ngModel)]="user.secret"
+    required maxlength="30">
+  </div>
+
+  <div class="form-group">
+    <button [disabled]="!userRegistrationForm.valid || user.password !== user.password2"
+      class="btn btn-secondary" type="submit">Submit</button>
+  </div>
+</form>

@@ -1,0 +1,163 @@
+<div class="card card-body bg-light" *ngIf="torrents">
+
+  <div class="card card-body options" id="filters">
+    <form class="form-inline">
+
+      <div class="form-group">
+        <label for="titleFilter">Title:</label>
+        <input type="text" class="form-control textFilter"
+          id="titleFilter" [(ngModel)]="filter_title"
+          name="title" #title>
+      </div>
+
+      <div class="form-group">
+        <label for="propFilter">Property:</label>
+        <input type="text" class="form-control textFilter" id="propFilter"
+          [(ngModel)]="filter_property"
+          name="property"
+          [ngbTypeahead]="searchForProperty"
+          (selectItem)="filterPropertySelected($event)">
+      </div>
+
+      <div class="form-group" *ngIf="!top && seasons.length > 0">
+        <label for="seasonFilter">Season:</label>
+        <select class="form-control" id="seasonFilter"
+          name="season" [(ngModel)]="filter_season"
+          (change)="searchForEpisode()">
+          <option value="-1"></option>
+          <option *ngFor="let season of seasons">{{season}}</option>
+        </select>
+      </div>
+
+      <div class="form-group" *ngIf="!top && seasons.length > 0">
+        <label for="episodeFilter">Episode:</label>
+        <select class="form-control" id="episodeFilter"
+          name="episode" [(ngModel)]="filter_episode">
+          <option value="-1"></option>
+          <option *ngFor="let episode of episodes" type="number">{{episode}}</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="sortBy">Sort by:</label>
+        <select class="form-control" id="sortBy" [(ngModel)]="sortBy" name="sortBy">
+          <option>Site</option>
+          <option>Title</option>
+          <option>Size</option>
+          <option selected>Score</option>
+          <option>Seeders</option>
+        </select>
+      </div>
+
+      <div class="form-check show-scores">
+        <input type="checkbox" class="form-check-input" id="showScores"
+          name="showScores" [(ngModel)]="showScores">
+        <label class="form-check-label" for="showScores">Show scores</label>
+      </div>
+
+      <div class="form-group" *ngIf="top">
+        <button class="clear btn btn-danger" type="submit"
+          (click)="clearTop()">
+
+          <i class="fa fa-times"></i>
+          <span>Clear</span>
+          
+        </button>
+      </div>
+      
+    </form>
+
+  </div>
+
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped table-responsive">
+      <thead>
+        <tr>
+          <th scope="col" class="fit">Site</th>
+          <th scope="col">Title</th>
+          <th scope="col" class="fit" >Size</th>
+          <th scope="col" class="fit">Peers</th>
+          <th scope="col" class="fit">Links</th>
+          <th scope="col" class="fit">Tools</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let torrent of torrents
+          | torrentFilter:filter_title:filter_property:filter_season:filter_episode
+          | sortBy:sortBy">
+
+          <td class="fit">
+            {{torrent.site}}
+          </td>
+
+          <td [class.showScore]="showScores">
+            <span class="title-score">
+              <span class="title-prop">
+                <a href="{{torrent.href}}" target="_blank">{{torrent.title}}</a>
+    
+                <span *ngIf="torrent.properties && objectKeys(torrent.properties).length > 0" class="prop">
+                  <ng-template #popContent>
+                      <table class="table" style="margin: 0;">
+                        <tr *ngFor="let prop of objectKeys(torrent.properties)">
+                          <th scope="row">{{prop}}</th>
+                          <td>{{torrent.properties[prop]}}</td>
+                        </tr>
+                      </table>
+                    </ng-template>
+      
+                    <i class="fas fa-file-alt" [ngbPopover]="popContent" placement="left"
+                      triggers="mouseenter:mouseleave"></i>
+                </span>
+
+              </span>
+
+              <span class="score" *ngIf="showScores">
+                {{torrent.score}}
+              </span>
+
+            </span>
+
+          </td>
+
+          <td class="fit">
+            {{torrent.size}}
+          </td>
+
+          <td class="fit">
+            {{torrent.seeders}}/{{torrent.leechers}}
+          </td>
+
+          <td class="fit">
+            <span class="links"
+            [ngClass]="{ 'between': (torrent.torrent && torrent.magnet), 'evenly': (torrent.torrent === undefined || torrent.magnet === undefined) }">
+              <a *ngIf="torrent.torrent" class="torrent-link" [href]="torrent.torrent | safeUrl">
+                <i class="fas fa-file"></i>
+              </a>
+              <a *ngIf="torrent.magnet" [href]="torrent.magnet | safeUrl">
+                <i class="fas fa-magnet"></i>
+              </a>
+            </span>
+          </td>
+
+          <td class="fit">
+            <span class="tools"
+            [ngClass]="{ 'between': top, 'evenly': !top }">
+              <a>
+                <i [hidden]="inspecting.indexOf(torrent.id) !== -1"
+                  class="fas fa-sync" (click)="inspect(torrent.id)"></i>
+                  
+                <i [hidden]="inspecting.indexOf(torrent.id) === -1"
+                class="fas fa-sync fa-spin"></i>
+              </a>
+              <a [hidden]="!top" (click)="removeFromTop(torrent.id)">
+                <i class="fas fa-times"></i>
+              </a>
+            </span>
+          </td>
+        </tr>
+      </tbody>
+
+    </table>
+  </div>
+</div>

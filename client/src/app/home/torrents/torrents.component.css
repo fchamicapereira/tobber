@@ -1,0 +1,149 @@
+.card {
+    width: 90vw;
+}
+
+.card.options {
+    width: 100%;
+    background-color: transparent;
+    padding: 10px;
+    border: 0;
+    padding-top: 0;
+}
+
+.card.options form {
+    justify-content: space-between;
+}
+
+.card.options form label {
+    margin-right: 6px;
+}
+
+.card.options form .form-group {
+    width: fit-content;
+}
+
+.textFilter {
+    width: 8rem;
+}
+
+.numberFilter {
+    width: 4rem;
+}
+
+.table td.fit, 
+.table th.fit {
+    white-space: nowrap;
+    width: 1%;
+}
+
+.table td.showScore {
+    padding-bottom: 0;
+}
+
+.title-score {
+    display: flex;
+    flex-direction: column;
+}
+
+.score {
+    font-size: 70%;
+    align-self: flex-start;
+    margin-top: 1%;
+}
+
+.title-prop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+}
+
+.tools {
+    display: flex;
+    flex-direction: row;
+}
+
+.between {
+    justify-content: space-between;
+}
+
+.evenly {
+    justify-content: space-evenly;
+}
+
+a, .links, .tools {
+    color: black;
+}
+
+.links i:hover, .tools i:hover {
+    cursor: pointer;
+    color: #14212e;
+}
+
+@media only screen and (max-width: 768px) {
+
+    #filters form {
+        flex-direction: column;
+    }
+
+    #filters form div:not(.show-scores), #filters form div:not(.show-scores) input {
+        width: 100%;
+    }
+
+    tbody {
+        display: flex;
+        flex-direction: column;
+    }
+
+    tr {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        border-width: 1px;
+        border-style: solid;
+    }
+
+    tr td {
+        font-size: 4vw;
+    }
+
+    tr td:nth-child(1), tr th, .torrent-link, span.prop {
+        display: none;
+        visibility: hidden;
+    }
+
+    .title-prop span {
+        align-self: center;
+    }
+
+    tr td:nth-child(2) {
+        flex-grow: 1;
+    }
+
+    tr td:nth-child(3) {
+        width: 30% !important;
+        text-align: center;
+    }
+
+    tr td:nth-child(4) {
+        width: 30% !important;
+        text-align: center;
+    }
+
+    tr td:nth-child(5) {
+        width: 20% !important;
+        text-align: center;
+    }
+
+    tr td:nth-child(6) {
+        width: 20% !important;
+        text-align: center;
+    }
+
+
+}

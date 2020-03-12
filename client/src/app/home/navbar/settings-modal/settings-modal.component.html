@@ -1,0 +1,142 @@
+<div class="modal-header">
+  <h4 class="modal-title">Settings</h4>
+  <button type="button" class="close" aria-label="Close" (click)="activeModal.close(me)">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+<div class="card" *ngIf="me && skip && sites">
+  <div class="card-body">
+    <h5 class="card-title">Search</h5>
+
+    <span class="form-grid">
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-sm">Limit</span>
+        </div>
+        <input type="number" class="form-control" name="name"
+          id="name" [(ngModel)]="me.preferences.limit" min="-1" max="1000" step="1"
+          aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+      </div>
+    
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <input type="checkbox" name="omdb"
+            id="omdb" [(ngModel)]="me.preferences.omdb">
+          </div>
+        </div>
+        <label for="omdb" class="form-control">IMDb helper</label>
+      </div>
+    
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <input type="checkbox" name="sort"
+            id="sort" [(ngModel)]="me.preferences.sort">
+          </div>
+        </div>
+        <label for="sort" class="form-control">Sort</label>
+      </div>
+    
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <input type="checkbox" name="anime"
+            id="anime" [(ngModel)]="me.preferences.anime">
+          </div>
+        </div>
+        <label for="anime" class="form-control">Anime</label>
+      </div>
+
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-sm">Top</span>
+        </div>
+        <input type="number" class="form-control" name="top"
+          id="top" [(ngModel)]="me.preferences.top" min="0" max="100" step="1"
+          aria-label="Small" aria-describedby="inputGroup-sizing-sm-2">
+      </div>
+    </span>
+
+    <h6 class="card-subtitle mb-2 text-muted">Skip</h6>
+
+    <span class="form-grid">
+      <div class="input-group mb-3" *ngFor="let site of sites">
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <input type="checkbox" name="{{site.name}}"
+              id="{{site.name}}" [(ngModel)]="skip[site.name]">
+          </div>
+        </div>
+        <label for="{{site.name}}" class="form-control">
+          {{site.name}}
+        </label>
+      </div>
+    </span>
+
+    <span class="save">
+      <span class="message" [class.valid]="msg.search.valid" [class.invalid]="!msg.search.valid">
+        {{msg.search.msg}}
+      </span>
+      <button type="button" class="btn btn-outline-info action" (click)="save()">
+        Save
+      </button>
+    </span>
+    
+  </div>
+</div>
+
+<div class="card" *ngIf="me">
+  <div class="card-body">
+    <h5 class="card-title">Account</h5>
+
+    <h6 class="card-subtitle mb-2 text-muted">Change password</h6>
+
+    <span class="form-inline-grid">
+
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-sm">Old pass</span>
+        </div>
+        <input type="password" class="form-control" name="old_pass"
+          id="old_pass" [(ngModel)]="pass.old" min="-1"
+          aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+      </div>
+
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-sm">New pass</span>
+        </div>
+        <input type="password" class="form-control" name="new_pass"
+          id="new_pass" [(ngModel)]="pass.new"
+          aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+      </div>
+
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-sm">Confirm</span>
+        </div>
+        <input type="password" class="form-control" name="confirm_pass"
+          id="confirm_pass" [(ngModel)]="pass.confirm"
+          aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+      </div>
+      
+    </span>
+
+    <span class="save">
+      <span class="message" [class.valid]="msg.account.valid" [class.invalid]="!msg.account.valid">
+        {{msg.account.msg}}
+      </span>
+      <button type="button" class="btn btn-outline-info action" (click)="changePass()"
+        [class.disabled]="!changePassValid()">
+        Change pass
+      </button>
+    </span>
+    
+  </div>
+</div>  
+
+<div class="modal-footer">
+  <button type="button" class="btn btn-outline-dark" (click)="activeModal.close(me)">Close</button>
+</div>

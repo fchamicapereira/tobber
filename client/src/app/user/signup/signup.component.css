@@ -1,0 +1,13 @@
+div.error-message {
+    margin-bottom: 3%;
+    color: #e91e63;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group span {
+    align-self: flex-start;
+}

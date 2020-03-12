@@ -1,0 +1,72 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <span id="options-wrapper">
+    <a class="navbar-brand" routerLink="/">Tobber</a>
+
+    <span *ngIf="me" id="myOptions">
+        <div ngbDropdown class="d-inline-block">
+        <button class="btn btn-outline-secondary" id="dropdownBasic1" ngbDropdownToggle>
+          <span id="optionsName">{{me.name}}</span>
+        </button>
+  
+          <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+            <button class="dropdown-item" (click)="openSettings()">Settings</button>
+            <button class="dropdown-item" routerLink="/rules" >Rules</button>
+            <button class="dropdown-item" routerLink="/top" >Top</button>
+            <button class="dropdown-item" (click)="logout()">Logout</button>
+  
+            <span *ngIf="me.scope.includes('admin')">
+              <div class="dropdown-divider"></div>
+  
+              <button class="dropdown-item" (click)="openUsers()">Users</button>
+              <button class="dropdown-item" (click)="openSecret()">Secret</button>
+  
+            </span>
+  
+          </div>
+      </div>
+    </span>
+  </span>
+
+  <form class="form-inline my-2 my-lg-0 search-form" (submit)="crawl()">
+
+    <ng-template #rt let-r="result" let-t="term">
+      
+      <div class="omdb-result">
+        <img *ngIf="r.Poster !== 'N/A'" [src]="r.Poster">
+        <img *ngIf="r.Poster === 'N/A'" class="no-img">
+        <div class="info">
+          <span><b>Title: </b>{{r.Title}}</span>
+          <span><b>Year: </b>{{r.Year}}</span>
+          <span><b>Type: </b>{{r.Type}}</span>
+        </div>
+      </div>
+    
+    </ng-template>
+
+    <input *ngIf="omdb"
+      [(ngModel)]="search" class="form-control mr-sm-2" type="text"
+      placeholder="search" name="search"
+      [ngbTypeahead]="omdbSearch"
+      [resultTemplate]="rt"
+      [inputFormatter]="formatter"
+      [focusFirst]="false"
+      #instance="ngbTypeahead"/>
+
+    <input *ngIf="!omdb" [(ngModel)]="search" class="form-control mr-sm-2" type="text"
+      placeholder="search" name="search" />
+
+    <button id="searchButton" class="btn btn-outline-secondary my-2 my-sm-0" type="submit"
+      [class.disabled]="validSearch()">
+
+      <i [hidden]="!crawling" id="spinning" class="fas fa-sync fa-spin"></i>
+      <i [hidden]="crawling" id="searchIcon" class="fas fa-search"></i>
+      
+      <span id="searchText">
+        Search
+      </span>
+        
+    </button>
+
+  </form>
+
+</nav>

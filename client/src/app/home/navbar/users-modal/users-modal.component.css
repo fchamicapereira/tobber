@@ -1,0 +1,13 @@
+table td,th {
+    text-align: center;
+}
+
+.actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.actions i:hover {
+    cursor: pointer;
+}

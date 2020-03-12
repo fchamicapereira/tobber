@@ -1,0 +1,105 @@
+<div class="card card-body bg-light">
+  <ngb-tabset *ngIf="me">
+
+    <span *ngFor="let rule of rules">
+
+      <ngb-tab title="{{rule}}">
+        <ng-template ngbTabContent>
+
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th scope="col" style="width: 10%;">Key</th>
+                  <th scope="col">Keywords</th>
+                  <th scope="col">Score</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr *ngFor="let prop of me.rules[rule]" class="m-0">
+                  
+                  <td class="align-middle">
+                    <button class="key btn btn-danger" (click)="removeKey(rule, prop.key)">
+                      <i class="fa fa-times"></i>
+                      <span>{{prop.key}}</span>
+                    </button>
+                  </td>
+
+                  <td class="keywords">
+
+                    <button *ngFor="let keyword of prop.keywords" class="keyword btn btn-danger"
+                      (click)="removeKeyword(rule, prop.key, keyword)">
+                      <i class="fa fa-times"></i>
+                      <span>{{keyword}}</span>
+                    </button>
+                    
+                    <ng-template #popContent>
+                      <div class="addKeyword">
+                        <input #newKeywordBox placeholder="Keyword" class="form-control"
+                          (keyup.enter)="addKeyword(rule, prop.key, newKeywordBox.value); p.close()">
+                      </div>
+                    </ng-template>
+                    <button class="btn btn-success add"
+                      [ngbPopover]="popContent" popoverTitle="{{rule}}:{{prop.key}}"
+                      placement="top" triggers="manual" #p="ngbPopover"
+                      (click)="!p.isOpen() ? p.open() : p.close()">
+                      <i class="fa fa-plus"></i>
+                    </button>
+
+                  </td>
+
+                  <td class="align-middle score" style="text-align: center;">
+                    <input [(ngModel)]="prop.score" placeholder="{{prop.score}}" type="number"
+                      class="form-control" (change)="onChange()">
+                  </td>
+                </tr>
+
+                <tr>
+
+                  <td class="align-middle">
+
+                    <ng-template #popContent>
+                      <div class="addKey">
+                        <input #newKeyBox placeholder="Keyword" class="form-control"
+                          (keyup.enter)="addKey(rule, newKeyBox.value); p.close()">
+                      </div>
+                    </ng-template>
+                    <button class="key btn btn-success add"
+                      [ngbPopover]="popContent" popoverTitle="{{rule}}"
+                      placement="right" triggers="manual" #p="ngbPopover"
+                      (click)="!p.isOpen() ? p.open() : p.close()">
+                      <i class="fa fa-plus"></i>
+                    </button>
+
+                  </td>
+
+                </tr>
+              </tbody>
+            </table>
+
+        </ng-template>
+      </ngb-tab>
+      
+    </span>
+
+  </ngb-tabset>
+
+  <div class="actions">
+    <button class="btn btn-secondary"
+      (click)="revertToDefault()">
+      Revert to default
+    </button>
+    
+    <button class="btn btn-secondary"
+      [class.disabled]="!modified"
+      (click)="revertChanges()">
+      Revert changes
+    </button>
+
+    <button class="btn btn-secondary"
+      [class.disabled]="!modified"
+      (click)="save()">
+      Save
+    </button>
+  </div>
+</div>

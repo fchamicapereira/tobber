@@ -1,0 +1,36 @@
+.form-grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.form-grid div.input-group {
+    width: 40%;
+}
+
+.form-grid .input-group-text {
+    width: 4rem;
+}
+
+.form-grid .input-group-text input {
+    margin-left: 0.7rem;
+}
+
+.form-inline-grid .input-group-text {
+    width: 6rem;
+}
+
+.save {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.valid {
+    color: green;
+}
+
+.invalid {
+    color: red;
+}

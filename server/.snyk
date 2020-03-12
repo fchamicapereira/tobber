@@ -1,0 +1,8 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.12.0
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:lodash:20180130':
+    - tobber-engine > crawler > seenreq > ioredis > lodash:
+        patched: '2018-08-13T17:04:45.240Z'

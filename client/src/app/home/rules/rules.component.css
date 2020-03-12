@@ -1,0 +1,48 @@
+.card {
+    overflow: scroll;
+    width: 90vw;
+}
+
+.keywords {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.keywords button {
+    display: flex;
+    align-items: center;
+    margin-right: 1%;
+    margin-top: 0.5%;
+    margin-bottom: 0.5%;
+}
+
+.key {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.keywords button i, .key i {
+    margin-right: 5%;
+}
+
+.add {
+    display: flex;
+    justify-content: center;
+}
+
+.score {
+    width: 12%;
+}
+
+.actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.actions button {
+    margin-left: 2%;
+}

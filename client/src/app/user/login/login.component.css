@@ -1,0 +1,29 @@
+.card-wrapper {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 30rem;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.submit {
+    margin-bottom: 0;
+}
+
+div.error-message {
+    margin-bottom: 3%;
+    color: #e91e63;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
