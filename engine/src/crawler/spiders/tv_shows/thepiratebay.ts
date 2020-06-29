@@ -2,7 +2,7 @@ import * as cheerio from "cheerio";
 import { Info, Torrent } from "dataTypes";
 import Spider from "../spider";
 
-const URI = "https://piratebays.be/";
+const URI = "https://lepiratebay.org/";
 
 export class Thepiratebay extends Spider {
   constructor() {

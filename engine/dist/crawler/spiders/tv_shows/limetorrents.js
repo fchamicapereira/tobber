@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const spider_1 = require("../spider");
-const URI = "https://www.limetorrents.cc";
+const URI = "https://www.limetorrents.info";
 class Limetorrents extends spider_1.default {
     constructor() {
         super("limetorrents", URI, false);

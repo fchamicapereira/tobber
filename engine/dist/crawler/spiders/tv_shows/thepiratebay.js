@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const spider_1 = require("../spider");
-const URI = "https://piratebays.be/";
+const URI = "https://lepiratebay.org/";
 class Thepiratebay extends spider_1.default {
     constructor() {
         super("thepiratebay", URI, false);

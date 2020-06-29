@@ -2,7 +2,7 @@ import * as cheerio from "cheerio";
 import { Info, Torrent } from "dataTypes";
 import Spider from "../spider";
 
-const URI = "https://www.limetorrents.cc";
+const URI = "https://www.limetorrents.info";
 
 export class Limetorrents extends Spider {
   constructor() {
