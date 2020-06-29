@@ -59,6 +59,7 @@ function createAdmin(name, pass) {
 				new: true
 			}, (err, doc, res) => {
 				if (err) return console.error(err);
+				process.exit(0);
 		});
 	});
 }
