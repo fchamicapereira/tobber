@@ -22,8 +22,8 @@ describe('/secret', function() {
 		});
 
 		expect(res.statusCode).to.equal(200);
-		expect(res.result).to.be.a('string');
-		expect(res.result).to.equal(secret.get());
+		expect(res.result.secret).to.equal(secret.get().secret);
+		expect(res.result.next).to.equal(secret.get().next);
 	});
 
 	it('admin refreshes ticket', async function() {
@@ -57,9 +57,9 @@ describe('/secret', function() {
 		expect(res2.statusCode).to.equal(200);
 		expect(res3.statusCode).to.equal(200);
 
-		expect(res1.result).to.not.equal(res2.result);
-		expect(res1.result).to.not.equal(res3.result);
-		expect(res2.result).to.equal(res3.result);
+		expect(res1.result.secret).to.not.equal(res2.result.secret);
+		expect(res1.result.secret).to.not.equal(res3.result.secret);
+		expect(res2.result.secret).to.equal(res3.result.secret);
 	});
 
 	it('user fails to get ticket', async function() {

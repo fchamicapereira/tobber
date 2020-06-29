@@ -5,7 +5,7 @@ const secret = require('../src/secret/secret');
 const PASS = 'userPass';
 const ADMIN_PASS = 'adminPass';
 
-module.exports.adminPass = PASS;
+module.exports.adminPass = ADMIN_PASS;
 module.exports.pass = PASS;
 
 module.exports.admin = async () => {
@@ -16,7 +16,7 @@ module.exports.admin = async () => {
 			payload: {
 				name: 'admin',
 				pass: ADMIN_PASS,
-				secret: secret.get()
+				secret: secret.get().secret
 			}
 		});
 
@@ -48,7 +48,7 @@ module.exports.user = async () => {
 			payload: {
 				name: 'user',
 				pass: PASS,
-				secret: secret.get()
+				secret: secret.get().secret
 			}
 		});
 

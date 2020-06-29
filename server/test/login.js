@@ -4,7 +4,7 @@ const base = require('./base');
 const server = base.server;
 
 beforeEach(async function() {
-	await base.tearDown();
+	return await base.tearDown();
 });
 
 describe('/login', function() {

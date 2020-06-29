@@ -25,7 +25,7 @@ describe('/signup', function() {
 		const res = await server.inject(request({
 			name: NAME,
 			pass: PASS,
-			secret: secret.get()
+			secret: secret.get().secret
 		}));
 
 		const user = res.result;
@@ -43,14 +43,14 @@ describe('/signup', function() {
 			payload: {
 				name: NAME,
 				pass: PASS,
-				secret: secret.get()
+				secret: secret.get().secret
 			}
 		});
 
 		const res = await server.inject(request({
 			name: NAME,
 			pass: PASS,
-			secret: secret.get()
+			secret: secret.get().secret
 		}));
 
 		expect(res.statusCode).to.equal(409);
@@ -78,7 +78,7 @@ describe('/signup', function() {
 	it('no username', async function() {
 		const res = await server.inject(request({
 			pass: PASS,
-			secret: secret.get()
+			secret: secret.get().secret
 		}));
 
 		expect(res.statusCode).to.equal(400);
@@ -87,7 +87,7 @@ describe('/signup', function() {
 	it('no pass', async function() {
 		const res = await server.inject(request({
 			name: NAME,
-			secret: secret.get()
+			secret: secret.get().secret
 		}));
 
 		expect(res.statusCode).to.equal(400);
