@@ -5,7 +5,7 @@
 
 export const environment = {
   production: false,
-  api: 'http://localhost:8000/api',
+  port: 8000,
   whitelisteddomains: [ 'localhost:8000' ],
   blacklisteddomains: [
     'localhost:8000/api/login',

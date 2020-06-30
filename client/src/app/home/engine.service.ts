@@ -13,7 +13,7 @@ import { Site } from './site';
 @Injectable()
 export class EngineService {
 
-  private tobberUrl = `${environment.api}/engine`;
+  private tobberUrl;
   private headers = new HttpHeaders({ 'Content-Type': 'application/json' });
 
   private me: User;
@@ -23,6 +23,10 @@ export class EngineService {
   constructor(
     private http: HttpClient,
   ) { }
+
+  setTobberURL(hostname: string) {
+    this.tobberUrl = `http://${hostname}:${environment.port}/api/engine`;
+  }
 
   getEngineResponse(): Observable<EngineResponse> {
     return this.engineResponse.asObservable();

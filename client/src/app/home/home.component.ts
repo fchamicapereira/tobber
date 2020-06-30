@@ -14,7 +14,9 @@ export class HomeComponent implements OnInit {
 
   constructor(
     private userService: UserService,
-  ) { }
+  ) { 
+    this.userService.setTobberURL(location.hostname);
+  }
 
   ngOnInit() {
     this.userService.getMe().subscribe( me => this.me = me, err => {

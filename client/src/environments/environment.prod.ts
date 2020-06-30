@@ -1,6 +1,6 @@
 export const environment = {
   production: true,
-  api: 'https://tobber.ddns.net/api',
+  port: 80,
   whitelisteddomains: [ 'tobber.ddns.net' ],
   blacklisteddomains: [
     'tobber.ddns.net/api/login',

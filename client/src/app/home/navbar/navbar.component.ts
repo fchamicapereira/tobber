@@ -41,9 +41,14 @@ export class NavbarComponent implements OnInit {
     private omdbService: OmdbService,
     private router: Router
   ) {
+    this.userService.setTobberURL(location.hostname);
+    
     this.userService.getMe().subscribe( me => {
       this.updateMe(me);
     });
+
+    this.engineService.setTobberURL(location.hostname);
+
     this.subscription = this.engineService.getEngineResponse()
       .subscribe( er => {
         this.crawling = false;

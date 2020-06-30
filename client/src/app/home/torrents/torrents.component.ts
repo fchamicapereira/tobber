@@ -85,6 +85,8 @@ export class TorrentsComponent implements OnInit {
     private router: Router,
   ) {
     this.top = this.router.url === '/top';
+    this.userService.setTobberURL(location.hostname);
+    this.engineService.setTobberURL(location.hostname);
 
     if (!this.top) {
       this.engineService.getEngineResponse()

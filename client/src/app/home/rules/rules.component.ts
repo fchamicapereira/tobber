@@ -19,7 +19,10 @@ export class RulesComponent implements OnInit {
   constructor(
     private userService: UserService,
     private engineService: EngineService
-  ) { }
+  ) { 
+    this.userService.setTobberURL(location.hostname);
+    this.engineService.setTobberURL(location.hostname);
+  }
 
   ngOnInit() {
     this.userService.getMe()

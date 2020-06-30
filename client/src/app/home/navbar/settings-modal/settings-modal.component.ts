@@ -38,7 +38,10 @@ export class SettingsModalComponent implements OnInit {
     private userService: UserService,
     private engineService: EngineService,
     public activeModal: NgbActiveModal
-  ) { }
+  ) {
+    this.userService.setTobberURL(location.hostname);
+    this.engineService.setTobberURL(location.hostname);
+  }
 
   ngOnInit() {
     this.passInit();

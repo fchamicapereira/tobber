@@ -19,7 +19,9 @@ export class SignupComponent implements OnInit {
   constructor(
     private userService: UserService,
     private router: Router
-  ) { }
+  ) {
+    this.userService.setTobberURL(location.hostname);
+  }
 
   ngOnInit() {
     if (this.userService.isLoggedin()) {

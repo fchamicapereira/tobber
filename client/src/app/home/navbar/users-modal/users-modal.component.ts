@@ -16,7 +16,9 @@ export class UsersModalComponent implements OnInit {
   constructor(
     private userService: UserService,
     public activeModal: NgbActiveModal
-  ) { }
+  ) {
+    this.userService.setTobberURL(location.hostname);
+  }
 
   ngOnInit() {
     this.get();

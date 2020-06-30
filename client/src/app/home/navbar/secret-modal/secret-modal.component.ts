@@ -15,7 +15,9 @@ export class SecretModalComponent implements OnInit {
   constructor(
     private secretService: SecretService,
     public activeModal: NgbActiveModal
-  ) { }
+  ) {
+    this.secretService.setTobberURL(location.hostname);
+  }
 
   ngOnInit(): void {
     this.getSecret();

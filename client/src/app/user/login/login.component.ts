@@ -16,7 +16,9 @@ export class LoginComponent implements OnInit {
   constructor(
     private router: Router,
     private userService: UserService
-  ) { }
+  ) {
+    this.userService.setTobberURL(location.hostname);
+  }
 
   ngOnInit() {
     if (this.userService.isLoggedin()) {

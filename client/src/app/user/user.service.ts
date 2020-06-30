@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 @Injectable()
 export class UserService {
 
-  private tobberUrl = environment.api;
+  private tobberUrl;
   private me: User;
   private headers = new HttpHeaders({ 'Content-Type': 'application/json' });
 
@@ -20,6 +20,10 @@ export class UserService {
     private authGuardService: AuthGuardService,
     private router: Router
   ) { }
+
+  setTobberURL(hostname: string) {
+    this.tobberUrl = `http://${hostname}:${environment.port}/api`;
+  }
 
   isLoggedin (): boolean {
     return this.authGuardService.isAuthenticated();
@@ -46,6 +50,7 @@ export class UserService {
 
   login (name: String, pass: String): Observable<User> {
     const url = `${this.tobberUrl}/login`;
+    console.log('request to', url);
 
     return this.http.put<User>(url, { name: name, pass: pass }, { headers: this.headers })
       .pipe(

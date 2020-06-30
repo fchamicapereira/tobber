@@ -9,18 +9,22 @@ import { Secret } from './secret';
 @Injectable()
 export class SecretService {
 
-  private url = `${environment.api}/secret`;
+  private tobberUrl;
   private headers = new HttpHeaders({ 'Content-Type': 'application/json' });
 
   constructor(
     private http: HttpClient,
   ) { }
 
+  setTobberURL(hostname: string) {
+    this.tobberUrl = `http://${hostname}:${environment.port}/api/secret`;
+  }
+
   getSecret (): Observable<Secret> {
-    return this.http.get<Secret>(this.url, {headers: this.headers });
+    return this.http.get<Secret>(this.tobberUrl, {headers: this.headers });
   }
 
   refreshSecret(): Observable<Secret> {
-    return this.http.put<Secret>(this.url, { headers: this.headers });
+    return this.http.put<Secret>(this.tobberUrl, { headers: this.headers });
   }
 }
