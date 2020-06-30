@@ -31,7 +31,7 @@
     "hapi-router": "4.0.0",
     "hapi-swagger": "9.1.1",
     "hapijs-status-monitor": "git+https://github.com/ziyasal/hapijs-status-monitor.git",
-    "hoek": "4.2.0",
+    "hoek": "6.1.3",
     "inert": "5.1.0",
     "joi": "13.3.0",
     "jsonwebtoken": "8.2.1",
