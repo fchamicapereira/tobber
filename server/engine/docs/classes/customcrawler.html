@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Limetorrents | tobber-engine</title>
+	<title>CustomCrawler | tobber-engine</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style type="text/css">/*! normalize.css v1.1.3 | MIT License | git.io/normalize */
@@ -909,46 +909,43 @@ img { max-width: 100%; }
 </header>
 <nav class="tsd-navigation secondary">
 	<ul>
-		<li class=" tsd-kind-class">
-			<a href="customcrawler.html" class="tsd-kind-icon">Custom<wbr>Crawler</a>
-		</li>
 		<li class="current tsd-kind-class">
-			<a href="limetorrents.html" class="tsd-kind-icon">Limetorrents</a>
+			<a href="customcrawler.html" class="tsd-kind-icon">Custom<wbr>Crawler</a>
 			<ul>
-				<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
-					<a href="limetorrents.html#constructor" class="tsd-kind-icon">constructor</a>
+				<li class=" tsd-kind-constructor tsd-parent-kind-class">
+					<a href="customcrawler.html#constructor" class="tsd-kind-icon">constructor</a>
 				</li>
-				<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-					<a href="limetorrents.html#anime" class="tsd-kind-icon">anime</a>
+				<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a href="customcrawler.html#crawler" class="tsd-kind-icon">crawler</a>
 				</li>
-				<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-					<a href="limetorrents.html#name" class="tsd-kind-icon">name</a>
+				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
+					<a href="customcrawler.html#appendtoopt" class="tsd-kind-icon">append<wbr>ToOpt</a>
 				</li>
-				<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-					<a href="limetorrents.html#uri" class="tsd-kind-icon">uri</a>
+				<li class=" tsd-kind-method tsd-parent-kind-class">
+					<a href="customcrawler.html#crawl" class="tsd-kind-icon">crawl</a>
 				</li>
-				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-					<a href="limetorrents.html#getcrawleroptions" class="tsd-kind-icon">get<wbr>Crawler<wbr>Options</a>
+				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
+					<a href="customcrawler.html#episodequery" class="tsd-kind-icon">episode<wbr>Query</a>
 				</li>
-				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-					<a href="limetorrents.html#getinfooptions" class="tsd-kind-icon">get<wbr>Info<wbr>Options</a>
+				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
+					<a href="customcrawler.html#generateinternalopts" class="tsd-kind-icon">generate<wbr>Internal<wbr>Opts</a>
 				</li>
-				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
-					<a href="limetorrents.html#processhtml" class="tsd-kind-icon">processHTML</a>
+				<li class=" tsd-kind-method tsd-parent-kind-class">
+					<a href="customcrawler.html#getinfo" class="tsd-kind-icon">get<wbr>Info</a>
 				</li>
-				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
-					<a href="limetorrents.html#processhtmlforinfo" class="tsd-kind-icon">processHTMLfor<wbr>Info</a>
+				<li class=" tsd-kind-method tsd-parent-kind-class">
+					<a href="customcrawler.html#getsites" class="tsd-kind-icon">get<wbr>Sites</a>
 				</li>
-				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected">
-					<a href="limetorrents.html#transformquery" class="tsd-kind-icon">transform<wbr>Query</a>
+				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
+					<a href="customcrawler.html#seasonandepquery" class="tsd-kind-icon">season<wbr>And<wbr>EpQuery</a>
 				</li>
-				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
-					<a href="limetorrents.html#initializeinfo" class="tsd-kind-icon">initialize<wbr>Info</a>
-				</li>
-				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
-					<a href="limetorrents.html#initializetorrent" class="tsd-kind-icon">initialize<wbr>Torrent</a>
+				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
+					<a href="customcrawler.html#seasonquery" class="tsd-kind-icon">season<wbr>Query</a>
 				</li>
 			</ul>
+		</li>
+		<li class=" tsd-kind-class">
+			<a href="limetorrents.html" class="tsd-kind-icon">Limetorrents</a>
 		</li>
 		<li class=" tsd-kind-class">
 			<a href="nyaa.html" class="tsd-kind-icon">Nyaa</a>
@@ -1024,12 +1021,7 @@ img { max-width: 100%; }
 			<h3>Hierarchy</h3>
 			<ul class="tsd-hierarchy">
 				<li>
-					<a href="spider.html" class="tsd-signature-type">Spider</a>
-					<ul class="tsd-hierarchy">
-						<li>
-							<span class="target">Limetorrents</span>
-						</li>
-					</ul>
+					<span class="target">CustomCrawler</span>
 				</li>
 			</ul>
 		</section>
@@ -1040,27 +1032,26 @@ img { max-width: 100%; }
 					<section class="tsd-index-section ">
 						<h3>Constructors</h3>
 						<ul class="tsd-index-list">
-							<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite"><a href="limetorrents.html#constructor" class="tsd-kind-icon">constructor</a></li>
+							<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="customcrawler.html#constructor" class="tsd-kind-icon">constructor</a></li>
 						</ul>
 					</section>
-					<section class="tsd-index-section tsd-is-inherited">
+					<section class="tsd-index-section tsd-is-private tsd-is-private-protected">
 						<h3>Properties</h3>
 						<ul class="tsd-index-list">
-							<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="limetorrents.html#anime" class="tsd-kind-icon">anime</a></li>
-							<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="limetorrents.html#name" class="tsd-kind-icon">name</a></li>
-							<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="limetorrents.html#uri" class="tsd-kind-icon">uri</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="customcrawler.html#crawler" class="tsd-kind-icon">crawler</a></li>
 						</ul>
 					</section>
 					<section class="tsd-index-section ">
 						<h3>Methods</h3>
 						<ul class="tsd-index-list">
-							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="limetorrents.html#getcrawleroptions" class="tsd-kind-icon">get<wbr>Crawler<wbr>Options</a></li>
-							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="limetorrents.html#getinfooptions" class="tsd-kind-icon">get<wbr>Info<wbr>Options</a></li>
-							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="limetorrents.html#processhtml" class="tsd-kind-icon">processHTML</a></li>
-							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="limetorrents.html#processhtmlforinfo" class="tsd-kind-icon">processHTMLfor<wbr>Info</a></li>
-							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected"><a href="limetorrents.html#transformquery" class="tsd-kind-icon">transform<wbr>Query</a></li>
-							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="limetorrents.html#initializeinfo" class="tsd-kind-icon">initialize<wbr>Info</a></li>
-							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="limetorrents.html#initializetorrent" class="tsd-kind-icon">initialize<wbr>Torrent</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="customcrawler.html#appendtoopt" class="tsd-kind-icon">append<wbr>ToOpt</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class"><a href="customcrawler.html#crawl" class="tsd-kind-icon">crawl</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="customcrawler.html#episodequery" class="tsd-kind-icon">episode<wbr>Query</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="customcrawler.html#generateinternalopts" class="tsd-kind-icon">generate<wbr>Internal<wbr>Opts</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class"><a href="customcrawler.html#getinfo" class="tsd-kind-icon">get<wbr>Info</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class"><a href="customcrawler.html#getsites" class="tsd-kind-icon">get<wbr>Sites</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="customcrawler.html#seasonandepquery" class="tsd-kind-icon">season<wbr>And<wbr>EpQuery</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="customcrawler.html#seasonquery" class="tsd-kind-icon">season<wbr>Query</a></li>
 						</ul>
 					</section>
 				</div>
@@ -1068,75 +1059,84 @@ img { max-width: 100%; }
 		</section>
 		<section class="tsd-panel-group tsd-member-group ">
 			<h2>Constructors</h2>
-			<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
+			<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
 				<a name="constructor" class="tsd-anchor"></a>
 				<h3>constructor</h3>
-				<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
-					<li class="tsd-signature tsd-kind-icon">new <wbr>Limetorrents<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="limetorrents.html" class="tsd-signature-type">Limetorrents</a></li>
+				<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
+					<li class="tsd-signature tsd-kind-icon">new <wbr>Custom<wbr>Crawler<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="customcrawler.html" class="tsd-signature-type">CustomCrawler</a></li>
 				</ul>
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
 						<aside class="tsd-sources">
-							<p>Overrides <a href="spider.html">Spider</a>.<a href="spider.html#constructor">constructor</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/fchamicapereira/tobber/blob/74ac36c/engine/src/crawler/spiders/tv_shows/limetorrents.ts#L7">crawler/spiders/tv_shows/limetorrents.ts:7</a></li>
+								<li>Defined in <a href="https://github.com/fchamicapereira/tobber/blob/fdc0784/engine/src/crawler/customCrawler.ts#L14">crawler/customCrawler.ts:14</a></li>
 							</ul>
 						</aside>
-						<h4 class="tsd-returns-title">Returns <a href="limetorrents.html" class="tsd-signature-type">Limetorrents</a></h4>
+						<h4 class="tsd-returns-title">Returns <a href="customcrawler.html" class="tsd-signature-type">CustomCrawler</a></h4>
 					</li>
 				</ul>
 			</section>
 		</section>
-		<section class="tsd-panel-group tsd-member-group tsd-is-inherited">
+		<section class="tsd-panel-group tsd-member-group tsd-is-private tsd-is-private-protected">
 			<h2>Properties</h2>
-			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-				<a name="anime" class="tsd-anchor"></a>
-				<h3>anime</h3>
-				<div class="tsd-signature tsd-kind-icon">anime<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+				<a name="crawler" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagPrivate">Private</span> crawler</h3>
+				<div class="tsd-signature tsd-kind-icon">crawler<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Crawler</span></div>
 				<aside class="tsd-sources">
-					<p>Inherited from <a href="spider.html">Spider</a>.<a href="spider.html#anime">anime</a></p>
 					<ul>
-						<li>Defined in <a href="https://github.com/fchamicapereira/tobber/blob/74ac36c/engine/src/crawler/spiders/spider.ts#L24">crawler/spiders/spider.ts:24</a></li>
-					</ul>
-				</aside>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-				<a name="name" class="tsd-anchor"></a>
-				<h3>name</h3>
-				<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-				<aside class="tsd-sources">
-					<p>Inherited from <a href="spider.html">Spider</a>.<a href="spider.html#name">name</a></p>
-					<ul>
-						<li>Defined in <a href="https://github.com/fchamicapereira/tobber/blob/74ac36c/engine/src/crawler/spiders/spider.ts#L22">crawler/spiders/spider.ts:22</a></li>
-					</ul>
-				</aside>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-				<a name="uri" class="tsd-anchor"></a>
-				<h3>uri</h3>
-				<div class="tsd-signature tsd-kind-icon">uri<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-				<aside class="tsd-sources">
-					<p>Inherited from <a href="spider.html">Spider</a>.<a href="spider.html#uri">uri</a></p>
-					<ul>
-						<li>Defined in <a href="https://github.com/fchamicapereira/tobber/blob/74ac36c/engine/src/crawler/spiders/spider.ts#L23">crawler/spiders/spider.ts:23</a></li>
+						<li>Defined in <a href="https://github.com/fchamicapereira/tobber/blob/fdc0784/engine/src/crawler/customCrawler.ts#L14">crawler/customCrawler.ts:14</a></li>
 					</ul>
 				</aside>
 			</section>
 		</section>
 		<section class="tsd-panel-group tsd-member-group ">
 			<h2>Methods</h2>
-			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-				<a name="getcrawleroptions" class="tsd-anchor"></a>
-				<h3>get<wbr>Crawler<wbr>Options</h3>
-				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-					<li class="tsd-signature tsd-kind-icon">get<wbr>Crawler<wbr>Options<span class="tsd-signature-symbol">(</span>search<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, htmlProcessor<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span>, cb<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span>, opt<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">InternalOptions</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">CrawlerOptions</span></li>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
+				<a name="appendtoopt" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagPrivate">Private</span> append<wbr>ToOpt</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
+					<li class="tsd-signature tsd-kind-icon">append<wbr>ToOpt<span class="tsd-signature-symbol">(</span>opt<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Options</span>, obj<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">InternalOptions</span></li>
 				</ul>
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
 						<aside class="tsd-sources">
-							<p>Inherited from <a href="spider.html">Spider</a>.<a href="spider.html#getcrawleroptions">getCrawlerOptions</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/fchamicapereira/tobber/blob/74ac36c/engine/src/crawler/spiders/spider.ts#L36">crawler/spiders/spider.ts:36</a></li>
+								<li>Defined in <a href="https://github.com/fchamicapereira/tobber/blob/fdc0784/engine/src/crawler/customCrawler.ts#L85">crawler/customCrawler.ts:85</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>opt: <span class="tsd-signature-type">Options</span></h5>
+							</li>
+							<li>
+								<h5>obj: <span class="tsd-signature-type">object</span></h5>
+								<ul class="tsd-parameters">
+									<li class="tsd-parameter">
+										<h5><span class="tsd-flag ts-flagOptional">Optional</span> ep<wbr>Query<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
+									</li>
+									<li class="tsd-parameter">
+										<h5>search<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+									</li>
+								</ul>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">InternalOptions</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<a name="crawl" class="tsd-anchor"></a>
+				<h3>crawl</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<li class="tsd-signature tsd-kind-icon">crawl<span class="tsd-signature-symbol">(</span>search<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, cb<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span>, opt<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Options</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/fchamicapereira/tobber/blob/fdc0784/engine/src/crawler/customCrawler.ts#L29">crawler/customCrawler.ts:29</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1145,39 +1145,18 @@ img { max-width: 100%; }
 								<h5>search: <span class="tsd-signature-type">string</span></h5>
 							</li>
 							<li>
-								<h5>htmlProcessor: <span class="tsd-signature-type">function</span></h5>
-								<ul class="tsd-parameters">
-									<li class="tsd-parameter-siganture">
-										<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
-											<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>htmlBody<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">CheerioStatic</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Torrent</span><span class="tsd-signature-symbol">[]</span></li>
-										</ul>
-										<ul class="tsd-descriptions">
-											<li class="tsd-description">
-												<h4 class="tsd-parameters-title">Parameters</h4>
-												<ul class="tsd-parameters">
-													<li>
-														<h5>htmlBody: <span class="tsd-signature-type">CheerioStatic</span></h5>
-													</li>
-												</ul>
-												<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Torrent</span><span class="tsd-signature-symbol">[]</span></h4>
-											</li>
-										</ul>
-									</li>
-								</ul>
-							</li>
-							<li>
 								<h5>cb: <span class="tsd-signature-type">function</span></h5>
 								<ul class="tsd-parameters">
 									<li class="tsd-parameter-siganture">
 										<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
-											<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>response<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ResponseFromCrawler</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+											<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>results<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ResponseFromCrawler</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 										</ul>
 										<ul class="tsd-descriptions">
 											<li class="tsd-description">
 												<h4 class="tsd-parameters-title">Parameters</h4>
 												<ul class="tsd-parameters">
 													<li>
-														<h5>response: <span class="tsd-signature-type">ResponseFromCrawler</span></h5>
+														<h5>results: <span class="tsd-signature-type">ResponseFromCrawler</span></h5>
 													</li>
 												</ul>
 												<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1187,25 +1166,73 @@ img { max-width: 100%; }
 								</ul>
 							</li>
 							<li>
-								<h5>opt: <span class="tsd-signature-type">InternalOptions</span></h5>
+								<h5>opt: <span class="tsd-signature-type">Options</span></h5>
 							</li>
 						</ul>
-						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">CrawlerOptions</span></h4>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
 					</li>
 				</ul>
 			</section>
-			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-				<a name="getinfooptions" class="tsd-anchor"></a>
-				<h3>get<wbr>Info<wbr>Options</h3>
-				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-					<li class="tsd-signature tsd-kind-icon">get<wbr>Info<wbr>Options<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, htmlProcessor<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span>, cb<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">CrawlerOptions</span></li>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
+				<a name="episodequery" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagPrivate">Private</span> episode<wbr>Query</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
+					<li class="tsd-signature tsd-kind-icon">episode<wbr>Query<span class="tsd-signature-symbol">(</span>episode<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
 				</ul>
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
 						<aside class="tsd-sources">
-							<p>Inherited from <a href="spider.html">Spider</a>.<a href="spider.html#getinfooptions">getInfoOptions</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/fchamicapereira/tobber/blob/74ac36c/engine/src/crawler/spiders/spider.ts#L74">crawler/spiders/spider.ts:74</a></li>
+								<li>Defined in <a href="https://github.com/fchamicapereira/tobber/blob/fdc0784/engine/src/crawler/customCrawler.ts#L81">crawler/customCrawler.ts:81</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>episode: <span class="tsd-signature-type">number</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
+				<a name="generateinternalopts" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagPrivate">Private</span> generate<wbr>Internal<wbr>Opts</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
+					<li class="tsd-signature tsd-kind-icon">generate<wbr>Internal<wbr>Opts<span class="tsd-signature-symbol">(</span>search<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, opt<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Options</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">InternalOptions</span><span class="tsd-signature-symbol">[]</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/fchamicapereira/tobber/blob/fdc0784/engine/src/crawler/customCrawler.ts#L94">crawler/customCrawler.ts:94</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>search: <span class="tsd-signature-type">string</span></h5>
+							</li>
+							<li>
+								<h5>opt: <span class="tsd-signature-type">Options</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">InternalOptions</span><span class="tsd-signature-symbol">[]</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<a name="getinfo" class="tsd-anchor"></a>
+				<h3>get<wbr>Info</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<li class="tsd-signature tsd-kind-icon">get<wbr>Info<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, cb<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/fchamicapereira/tobber/blob/fdc0784/engine/src/crawler/customCrawler.ts#L55">crawler/customCrawler.ts:55</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1214,39 +1241,18 @@ img { max-width: 100%; }
 								<h5>url: <span class="tsd-signature-type">string</span></h5>
 							</li>
 							<li>
-								<h5>htmlProcessor: <span class="tsd-signature-type">function</span></h5>
-								<ul class="tsd-parameters">
-									<li class="tsd-parameter-siganture">
-										<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
-											<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>htmlBody<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">CheerioStatic</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Info</span></li>
-										</ul>
-										<ul class="tsd-descriptions">
-											<li class="tsd-description">
-												<h4 class="tsd-parameters-title">Parameters</h4>
-												<ul class="tsd-parameters">
-													<li>
-														<h5>htmlBody: <span class="tsd-signature-type">CheerioStatic</span></h5>
-													</li>
-												</ul>
-												<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Info</span></h4>
-											</li>
-										</ul>
-									</li>
-								</ul>
-							</li>
-							<li>
 								<h5>cb: <span class="tsd-signature-type">function</span></h5>
 								<ul class="tsd-parameters">
 									<li class="tsd-parameter-siganture">
 										<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
-											<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>response<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Info</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+											<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>results<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Info</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 										</ul>
 										<ul class="tsd-descriptions">
 											<li class="tsd-description">
 												<h4 class="tsd-parameters-title">Parameters</h4>
 												<ul class="tsd-parameters">
 													<li>
-														<h5>response: <span class="tsd-signature-type">Info</span></h5>
+														<h5>results: <span class="tsd-signature-type">Info</span></h5>
 													</li>
 												</ul>
 												<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1256,130 +1262,73 @@ img { max-width: 100%; }
 								</ul>
 							</li>
 						</ul>
-						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">CrawlerOptions</span></h4>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 					</li>
 				</ul>
 			</section>
-			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
-				<a name="processhtml" class="tsd-anchor"></a>
-				<h3>processHTML</h3>
-				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
-					<li class="tsd-signature tsd-kind-icon">processHTML<span class="tsd-signature-symbol">(</span>$<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">CheerioStatic</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Torrent</span><span class="tsd-signature-symbol">[]</span></li>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<a name="getsites" class="tsd-anchor"></a>
+				<h3>get<wbr>Sites</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<li class="tsd-signature tsd-kind-icon">get<wbr>Sites<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Site</span><span class="tsd-signature-symbol">[]</span></li>
 				</ul>
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
 						<aside class="tsd-sources">
-							<p>Overrides <a href="spider.html">Spider</a>.<a href="spider.html#processhtml">processHTML</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/fchamicapereira/tobber/blob/74ac36c/engine/src/crawler/spiders/tv_shows/limetorrents.ts#L12">crawler/spiders/tv_shows/limetorrents.ts:12</a></li>
+								<li>Defined in <a href="https://github.com/fchamicapereira/tobber/blob/fdc0784/engine/src/crawler/customCrawler.ts#L25">crawler/customCrawler.ts:25</a></li>
+							</ul>
+						</aside>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Site</span><span class="tsd-signature-symbol">[]</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
+				<a name="seasonandepquery" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagPrivate">Private</span> season<wbr>And<wbr>EpQuery</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
+					<li class="tsd-signature tsd-kind-icon">season<wbr>And<wbr>EpQuery<span class="tsd-signature-symbol">(</span>season<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, episode<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/fchamicapereira/tobber/blob/fdc0784/engine/src/crawler/customCrawler.ts#L74">crawler/customCrawler.ts:74</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
 							<li>
-								<h5>$: <span class="tsd-signature-type">CheerioStatic</span></h5>
+								<h5>season: <span class="tsd-signature-type">number</span></h5>
 							</li>
-						</ul>
-						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Torrent</span><span class="tsd-signature-symbol">[]</span></h4>
-					</li>
-				</ul>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
-				<a name="processhtmlforinfo" class="tsd-anchor"></a>
-				<h3>processHTMLfor<wbr>Info</h3>
-				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
-					<li class="tsd-signature tsd-kind-icon">processHTMLfor<wbr>Info<span class="tsd-signature-symbol">(</span>$<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">CheerioStatic</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Info</span></li>
-				</ul>
-				<ul class="tsd-descriptions">
-					<li class="tsd-description">
-						<aside class="tsd-sources">
-							<p>Overrides <a href="spider.html">Spider</a>.<a href="spider.html#processhtmlforinfo">processHTMLforInfo</a></p>
-							<ul>
-								<li>Defined in <a href="https://github.com/fchamicapereira/tobber/blob/74ac36c/engine/src/crawler/spiders/tv_shows/limetorrents.ts#L72">crawler/spiders/tv_shows/limetorrents.ts:72</a></li>
-							</ul>
-						</aside>
-						<h4 class="tsd-parameters-title">Parameters</h4>
-						<ul class="tsd-parameters">
 							<li>
-								<h5>$: <span class="tsd-signature-type">CheerioStatic</span></h5>
-							</li>
-						</ul>
-						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Info</span></h4>
-					</li>
-				</ul>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected">
-				<a name="transformquery" class="tsd-anchor"></a>
-				<h3><span class="tsd-flag ts-flagProtected">Protected</span> transform<wbr>Query</h3>
-				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-protected">
-					<li class="tsd-signature tsd-kind-icon">transform<wbr>Query<span class="tsd-signature-symbol">(</span>search<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
-				</ul>
-				<ul class="tsd-descriptions">
-					<li class="tsd-description">
-						<aside class="tsd-sources">
-							<p>Overrides <a href="spider.html">Spider</a>.<a href="spider.html#transformquery">transformQuery</a></p>
-							<ul>
-								<li>Defined in <a href="https://github.com/fchamicapereira/tobber/blob/74ac36c/engine/src/crawler/spiders/tv_shows/limetorrents.ts#L101">crawler/spiders/tv_shows/limetorrents.ts:101</a></li>
-							</ul>
-						</aside>
-						<h4 class="tsd-parameters-title">Parameters</h4>
-						<ul class="tsd-parameters">
-							<li>
-								<h5>search: <span class="tsd-signature-type">string</span></h5>
+								<h5>episode: <span class="tsd-signature-type">number</span></h5>
 							</li>
 						</ul>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
 					</li>
 				</ul>
 			</section>
-			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
-				<a name="initializeinfo" class="tsd-anchor"></a>
-				<h3><span class="tsd-flag ts-flagStatic">Static</span> initialize<wbr>Info</h3>
-				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
-					<li class="tsd-signature tsd-kind-icon">initialize<wbr>Info<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Info</span></li>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
+				<a name="seasonquery" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagPrivate">Private</span> season<wbr>Query</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
+					<li class="tsd-signature tsd-kind-icon">season<wbr>Query<span class="tsd-signature-symbol">(</span>season<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></li>
 				</ul>
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
 						<aside class="tsd-sources">
-							<p>Inherited from <a href="spider.html">Spider</a>.<a href="spider.html#initializeinfo">initializeInfo</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/fchamicapereira/tobber/blob/74ac36c/engine/src/crawler/spiders/spider.ts#L16">crawler/spiders/spider.ts:16</a></li>
+								<li>Defined in <a href="https://github.com/fchamicapereira/tobber/blob/fdc0784/engine/src/crawler/customCrawler.ts#L67">crawler/customCrawler.ts:67</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
 							<li>
-								<h5>name: <span class="tsd-signature-type">string</span></h5>
+								<h5>season: <span class="tsd-signature-type">number</span></h5>
 							</li>
 						</ul>
-						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Info</span></h4>
-					</li>
-				</ul>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
-				<a name="initializetorrent" class="tsd-anchor"></a>
-				<h3><span class="tsd-flag ts-flagStatic">Static</span> initialize<wbr>Torrent</h3>
-				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
-					<li class="tsd-signature tsd-kind-icon">initialize<wbr>Torrent<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, identifier<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Torrent</span></li>
-				</ul>
-				<ul class="tsd-descriptions">
-					<li class="tsd-description">
-						<aside class="tsd-sources">
-							<p>Inherited from <a href="spider.html">Spider</a>.<a href="spider.html#initializetorrent">initializeTorrent</a></p>
-							<ul>
-								<li>Defined in <a href="https://github.com/fchamicapereira/tobber/blob/74ac36c/engine/src/crawler/spiders/spider.ts#L9">crawler/spiders/spider.ts:9</a></li>
-							</ul>
-						</aside>
-						<h4 class="tsd-parameters-title">Parameters</h4>
-						<ul class="tsd-parameters">
-							<li>
-								<h5>name: <span class="tsd-signature-type">string</span></h5>
-							</li>
-							<li>
-								<h5>identifier: <span class="tsd-signature-type">number</span></h5>
-							</li>
-						</ul>
-						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Torrent</span></h4>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h4>
 					</li>
 				</ul>
 			</section>

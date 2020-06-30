@@ -14,7 +14,7 @@ function options(request) {
 module.exports = [
 	{
 		method: 'GET',
-		path: '/engine/rules',
+		path: '/api/engine/rules',
 		config: {
 			auth: {
 				strategy: 'jwt',
@@ -33,7 +33,7 @@ module.exports = [
 	},
 	{
 		method: 'GET',
-		path: '/engine/sites',
+		path: '/api/engine/sites',
 		config: {
 			auth: {
 				strategy: 'jwt',
@@ -52,7 +52,7 @@ module.exports = [
 	},
 	{
 		method: 'GET',
-		path: '/engine/crawl/{search}',
+		path: '/api/engine/crawl/{search}',
 		config: {
 			auth: {
 				strategy: 'jwt',
@@ -106,7 +106,7 @@ module.exports = [
 	},
 	{
 		method: 'PUT',
-		path: '/engine/info',
+		path: '/api/engine/info',
 		config: {
 			auth: {
 				strategy: 'jwt',

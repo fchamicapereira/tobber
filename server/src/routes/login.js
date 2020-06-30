@@ -4,7 +4,7 @@ const handlers = require('../handlers');
 module.exports = [
 	{
 		method: ['PUT'],
-		path: '/login',
+		path: '/api/login',
 		config: {
 			auth: {
 				strategy: 'jwt',

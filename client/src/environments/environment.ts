@@ -5,11 +5,11 @@
 
 export const environment = {
   production: false,
-  api: 'http://localhost:8000',
+  api: 'http://localhost:8000/api',
   whitelisteddomains: [ 'localhost:8000' ],
   blacklisteddomains: [
-    'localhost:8000/login',
-    'localhost:8000/signup'
+    'localhost:8000/api/login',
+    'localhost:8000/api/signup'
   ],
   token: 'tobber_token',
   omdb: {

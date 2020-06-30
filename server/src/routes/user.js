@@ -8,7 +8,7 @@ const preGenHash = async (request) => {
 module.exports = [
 	{
 		method: 'GET',
-		path: '/user',
+		path: '/api/user',
 		config: {
 			auth: {
 				strategy: 'jwt',
@@ -27,7 +27,7 @@ module.exports = [
 	},
 	{
 		method: 'GET',
-		path: '/user/me',
+		path: '/api/user/me',
 		config: {
 			auth: {
 				strategy: 'jwt',
@@ -46,7 +46,7 @@ module.exports = [
 	},
 	{
 		method: 'PUT',
-		path: '/user/{name}/promote',
+		path: '/api/user/{name}/promote',
 		config: {
 			auth: {
 				strategy: 'jwt',
@@ -70,7 +70,7 @@ module.exports = [
 	},
 	{
 		method: 'PUT',
-		path: '/user/{name}/demote',
+		path: '/api/user/{name}/demote',
 		config: {
 			auth: {
 				strategy: 'jwt',
@@ -94,7 +94,7 @@ module.exports = [
 	},
 	{
 		method: 'DELETE',
-		path: '/user/me/top/{id}',
+		path: '/api/user/me/top/{id}',
 		config: {
 			auth: {
 				strategy: 'jwt',
@@ -117,7 +117,7 @@ module.exports = [
 	},
 	{
 		method: 'DELETE',
-		path: '/user/me/top',
+		path: '/api/user/me/top',
 		config: {
 			auth: {
 				strategy: 'jwt',
@@ -135,7 +135,7 @@ module.exports = [
 	},
 	{
 		method: 'PUT',
-		path: '/user/me/rules',
+		path: '/api/user/me/rules',
 		config: {
 			auth: {
 				strategy: 'jwt',
@@ -167,7 +167,7 @@ module.exports = [
 	},
 	{
 		method: 'PUT',
-		path: '/user/me/preferences',
+		path: '/api/user/me/preferences',
 		config: {
 			auth: {
 				strategy: 'jwt',
@@ -198,7 +198,7 @@ module.exports = [
 	},
 	{
 		method: 'PUT',
-		path: '/user/me/pass',
+		path: '/api/user/me/pass',
 		config: {
 			auth: {
 				strategy: 'jwt',
@@ -234,7 +234,7 @@ module.exports = [
 	},
 	{
 		method: 'DELETE',
-		path: '/user/{name}',
+		path: '/api/user/{name}',
 		config: {
 			auth: {
 				strategy: 'jwt',

@@ -4,7 +4,7 @@ const Joi = require('joi');
 module.exports = [
 	{
 		method: ['GET'],
-		path: '/secret',
+		path: '/api/secret',
 		config: {
 			auth: {
 				strategy: 'jwt',
@@ -24,7 +24,7 @@ module.exports = [
 
 	{
 		method: ['PUT'],
-		path: '/secret',
+		path: '/api/secret',
 		config: {
 			auth: {
 				strategy: 'jwt',

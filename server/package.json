@@ -41,7 +41,7 @@
     "password-hash": "1.2.2",
     "pretty-bytes": "4.0.2",
     "random-string": "0.2.0",
-    "tobber-engine": "../engine",
+    "tobber-engine": "./engine",
     "vision": "5.3.2"
   },
   "devDependencies": {

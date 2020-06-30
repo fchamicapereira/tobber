@@ -16,7 +16,7 @@ const preGetSecret = (request) => {
 module.exports = [
 	{
 		method: ['POST'],
-		path: '/signup',
+		path: '/api/signup',
 		config: {
 			auth: false,
 			pre: [
